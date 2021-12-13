@@ -1,0 +1,5 @@
+{//Configurando Babel
+    "presets": [
+        "@babel/env"
+    ]
+}

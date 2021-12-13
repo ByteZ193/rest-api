@@ -1,0 +1,48 @@
+###Este archio es utilizado para hacer test a las rutas de la api
+GET http://localhost:3000/api/task 
+#Peticion para traer todas las tareas
+
+###
+POST http://localhost:3000/api/task 
+Content-Type: application/json
+
+{
+    "title": "Hacer un sitio web en Angular",
+    "description": "Trabajo de empresa"
+}
+
+#Peticion para crear una tarea con el "done" en false
+
+###
+POST http://localhost:3000/api/task 
+Content-Type: application/json
+
+{
+    "title": "Hacer una casa",
+    "description": "Mano de obra",
+    "done": true
+}
+
+#Peticion para crear una tarea con el "done" en true
+
+###
+GET http://localhost:3000/api/task/6053dd4891dcc71d140cb132
+#Peticion para buscar una tarea por id
+
+###
+DELETE http://localhost:3000/api/task/6053ec7fb5fb36056ccb818f
+##Peticion para borrar una tarea por id
+
+###
+GET http://localhost:3000/api/task/findDoneTask/done
+##Peticion para buscar todas las tareas done
+
+###
+PUT http://localhost:3000/api/task/6053dd4891dcc71d140cb132
+Content-Type: application/json
+
+{
+    "done": false
+}
+
+##Peticion para actualizar una tarea por id
